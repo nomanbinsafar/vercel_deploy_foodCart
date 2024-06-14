@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: "poppins";
+}
+
+.topnav{
+    background: hsla(0, 2%, 9%, 0.671);
+    overflow: hidden;
+}
+
+.topnav a{
+    display: block;
+    float: right;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 10px 16px;
+    transition: 0.3s;
+}
+.active{
+    background: rgb(172, 128, 192);
+    color: white;
+}
+
+.cart-button {
+    background: white;
+    border-radius: 50%; /* Make the button round */
+    border: none;
+    color: rgb(172, 128, 192);
+    font-size: 25px;
+    cursor: pointer;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    width: 40px; /* Adjust as needed */
+    height: 40px; /* Adjust as needed */
+    display: flex; /* Center the cart logo */
+    justify-content: center; /* Center the cart logo */
+    align-items: center; /* Center the cart logo */
+}
+
+@media screen and (max-width: 1000px) {
+    .topnav a {
+        float: none; 
+        width: 100%; 
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+    }
+    .cart-button {
+        top: 180px;
+    }
+}
+
+.topnav a:hover{
+    background: rgb(166, 88, 202);
+}
+#foodContainer{
+    background-image:url("pie.jpg");
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+#foodContainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    background: rgba(0, 0, 0, 0.11); /* Adjust opacity as needed */
+}
+#cellContainer {
+    display: grid;
+    grid-template-columns: repeat(3, auto); /* Each row will have 3 columns */
+    gap: 50px; /* Gap between cells */
+    width: fit-content; /* Adjusted width */
+    margin: auto; /* Center the grid */
+    text-align: center; /* Align the content center */
+}
+
+.cell {
+    background: transparent;
+    border: 1px solid white;
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    box-shadow: 20px 20px 50px hsl(0, 3%, 29%);
+    width: 300px; 
+    height: auto; /* Adjusted height to allow content to fit */
+    font-size: 16px; /* Adjusted font size */
+    cursor: pointer;
+    transition: .3s;
+    display: flex;
+    flex-direction: column; /* Align content vertically */
+    justify-content: center; /* Center align content */
+    align-items: center;
+}
+
+.cell:hover {
+    box-shadow: 20px 20px 50px hsl(0, 0%, 0%);
+    backdrop-filter: blur(5px);
+}
+
+.cell img {
+    max-width: 80%; /* Ensure image fits within the cell */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Add spacing below image */
+    margin-top: 10px;
+}
+
+.cell h2{
+    margin: 5px 0; /* Adjusted margin */
+    text-align: center; /* Center align text */
+    font-size: 20px;
+    
+}
+.cell p{
+    margin: 5px 0; /* Adjusted margin */
+    text-align: center; /* Center align text */
+    font-size: 16px;
+}
+
+.cell button {
+    background-color: rgb(166, 88, 202);
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    transition: background-color 0.3s;
+    outline: none;
+    border: 1px solid beige;
+}
+.cell button:hover{
+    background-color: rgb(224, 224, 224);
+    color: black;
+    font-weight: bold;
+    border: 1px solid black;
+   
+}
+@media screen and (max-width: 1000px) {
+    #cellContainer {
+        grid-template-columns: repeat(2,auto); 
+        gap: 20px; 
+    }
+}
+@media screen and (max-width: 620px) {
+    #cellContainer {
+        grid-template-columns: repeat(1,auto); 
+    }
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color:whitesmoke;
+  color: black;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+#items {
+    text-align: left; /* Center align the text */
+
+}
+.sidebar a:hover {
+  color: #383535;
+}
+
+.sidebar .closeBtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}

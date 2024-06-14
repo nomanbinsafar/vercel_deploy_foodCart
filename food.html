@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>food_item</title>
+    <link rel="stylesheet" href="food_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="#home" class="active">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+    </div>
+
+    <button class="cart-button" onclick="openCart()" id="main"><i class="fas fa-shopping-cart"></i></button>
+    
+    <!--inside cart-->
+    <div id="foodCart" class="sidebar">
+        <a href="javascript:void(0)" class="closeBtn" onclick="closeCart()">×</a>
+       
+    </div>
+
+    <!--each foodViewCart-->
+   
+    <div id="foodContainer">
+        <h1>Select Food Items</h1>
+        <div id="cellContainer">
+            <div cellindex="0" class="cell">
+               <img src="burger.jpg" alt="burger">
+               <h2>Burger</h2>
+               <p>$5.79</p>
+               <button>Add to Cart</button>
+            </div>
+            <div cellindex="1" class="cell">
+               <img src="pizza.jpg" alt="pizza">
+               <h2>Pizza</h2>
+               <p>$10.99</p>
+               <button>Add to Cart</button>
+            </div>
+            <div cellindex="2" class="cell">
+                <img src="sandwitch.jpg" alt="sandwitch">
+                <h2>Sandwitch</h2>
+                <p>$3.81</p>
+                <button>Add to Cart</button>
+            </div>
+            <div cellindex="3" class="cell">
+                <img src="pasta.jpg" alt="pasta">
+                <h2>Pasta</h2>
+                <p>$15.87</p>
+                <button>Add to Cart</button>
+            </div>
+            <div cellindex="4" class="cell">
+                <img src="cake.jpg" alt="cake">
+                <h2>Cake</h2>
+                <p>$2.88</p>
+                <button>Add to Cart</button>
+            </div>
+            <div cellindex="5" class="cell">
+                <img src="pie.jpg" alt="pie">
+                <h2>Pie</h2>
+                <p>$7.32</p>
+                <button>Add to Cart</button>
+            </div>
+            <div cellindex="6" class="cell">
+                <img src="salad.jpg" alt="salad">
+                <h2>Salad</h2>
+                <p>$6.32</p>
+                <button>Add to Cart</button>
+            </div>
+            <div cellindex="7" class="cell">
+                <img src="ice-cream.jpg" alt="ice-cream">
+                <h2>Ice-Cream</h2>
+                <p>$8.32</p>
+                <button>Add to Cart</button>
+            </div>
+            <div cellindex="8" class="cell">
+                <img src="smoothie.jpg" alt="smoothie">
+                <h2>Smoothie</h2>
+                <p>$9.99</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="food.js"></script>
+</body>
+
+</html>
