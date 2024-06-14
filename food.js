@@ -39,7 +39,7 @@ function updateCart() {
     for (var itemName in cartItems) {
         var item = cartItems[itemName];
         var itemDiv = document.createElement("div");
-        itemDiv.innerHTML = "No:"+itemNo + " Name: " + itemName + " Quantity: " + item.quantity + " Price: $" + (item.price * item.quantity);
+        itemDiv.innerHTML = "No:"+itemNo + " Name: " + itemName + " Quantity: " + item.quantity + " Price: $" + (item.price * item.quantity).toFixed(2);
         itemsDiv.appendChild(itemDiv);
         subtotal += item.price * item.quantity;
         itemNo++;
@@ -47,7 +47,7 @@ function updateCart() {
 
     // Add the subtotal to the items div
     var subtotalDiv = document.createElement("div");
-    subtotalDiv.innerHTML = "Subtotal: $" + subtotal;
+    subtotalDiv.innerHTML = "Subtotal: $" + subtotal.toFixed(2);
     itemsDiv.appendChild(subtotalDiv);
 
     // Add the items div to the cart div
